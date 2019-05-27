@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form th:action="@{/15km/receive}" method="post">
+		<label for="inputGoods1">商品1</label>
+		<input type="text" name="goods1" id="inputGoods1">
+		<br>
+		<label for="inputGoods2">商品2</label>
+		<input type="text" name="goods2" id="inputGoods2">
+		<br>
+		<label for="inputGoods1">商品3</label>
+		<input type="text" name="goods3" id="inputGoods3">
+		<br>
+		<input type="submit" value="購入">
+	</form>
+
+</body>
+</html>

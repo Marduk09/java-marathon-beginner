@@ -24,7 +24,7 @@ public class RegisterController {
 		int priceInculeTax = (int) (price*1.08);
 		
 		application.setAttribute("price", price);
-		application.setAttribute("priceInculeTax", priceInculeTax);
+		application.setAttribute("priceIncludeTax", priceInculeTax);
 		
 		return "total-price";
 	}

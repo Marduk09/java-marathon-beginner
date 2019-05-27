@@ -1,10 +1,12 @@
 package com.example.controller;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.domain.User;
 import com.example.form.UserForm;
 
 
@@ -24,7 +26,9 @@ public class UserInfoController {
 	
 	@RequestMapping("/receive")
 	public String receiveUser(UserForm userForm, Model model) {
-		model.addAttribute("user", userForm);
+		User user = new User();
+		BeanUtils.copyProperties(userForm, user);
+		model.addAttribute("user", user);
 		return "output-user-info"; 
 		
 	}
