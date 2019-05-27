@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/10m")
+@RequestMapping("/10km")
 public class CalcController {
 	
 	
@@ -29,7 +29,7 @@ public class CalcController {
 	
 	@RequestMapping("/to-value2")
 	public String toValue2() {
-		return "output-to-value2";
+		return "output-value2";
 	}
 
 }
